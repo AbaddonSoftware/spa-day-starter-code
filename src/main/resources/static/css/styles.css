@@ -1,13 +1,22 @@
 body {
-    background-color: pink;
+    font-family: 'Alegreya', serif;
+    background-color: white;
+    height: 100%;
 }
 
 div {
     margin: auto;
-    width: 50%;
+    width: 95%;
+    height: 95%;
     padding: 10px;
     text-align: center;
     background-color: white;
+    border:5px solid pink;
+}
+
+li {
+    margin: auto;
+    width: 100px;
 }
 
 h1 {

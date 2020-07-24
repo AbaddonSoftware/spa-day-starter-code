@@ -4,12 +4,25 @@
     <meta charset="UTF-8" />
     <title>Spa Menu</title>
     <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>My Super Fancy Spa</h1>
 <div id = "clientProfile">
-</div>
+    <h1>My Super Fancy Spa</h1>
+    <h2>My profile</h2>
+    <p th:text="${name.matches('[//s]*')} ? 'Anonymous' : ${name}"></p>
+    <p th:text="${skintype}"></p>
+    <p th:text="${manipedi}"></p>
 <div id = "servicesMenu">
+    <h1>Menu of services</h1>
+    <h3>Facial Treatments</h3>
+    <p>The facial treatments listed below are what our Estheticians recommend for your given skin type.</p>
+        <ul th:each="facialType : ${appropriateFacials}">
+            <li th:text="${facialType}"></li>
+        </ul>
+    <h1 th:text="${manipedi.substring(0,1).toUpperCase() + manipedi.substring(1)}"></h1>
+    <p th:replace="${manipedi.equals('manicure')} ? ~{fragments :: manicureDescription} : ~{fragments :: pedicureDescription}"></p>
+</div>
 </div>
 </body>
 </html>
