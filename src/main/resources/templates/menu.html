@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Spa Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap" rel="stylesheet">
 </head>
@@ -20,8 +21,8 @@
         <ul th:each="facialType : ${appropriateFacials}">
             <li th:text="${facialType}"></li>
         </ul>
-    <h1 th:text="${manipedi.substring(0,1).toUpperCase() + manipedi.substring(1)}"></h1>
-<!--    <p th:replace="${manipedi.equals('manicure')} ? ~{fragments :: manicureDescription} : ~{fragments :: pedicureDescription}"></p>-->
+    <h1 th:text="${manipedi.equals('manicure')} ? 'Manicure' : (${manipedi.equals('pedicure')} ? 'Pedicure' : 'ManiPedi') "></h1>
+    <p th:replace="${manipedi.equals('manicure')} ? ~{fragments :: manicureDescription} : ~{fragments :: pedicureDescription}"></p>
     <th:block th:switch="${manipedi}">
         <th:block th:case="'manicure'">
             <p th:replace="fragments :: manicureDescription"></p>
@@ -41,7 +42,7 @@
     <th:block th:each="polish : ${polishes}">
         <div th:style="|background-color:${polish.toLowerCase()}; width:auto; display: inline; height:80px; margin: 10px; border:none;|" th:text="${polish}"></div>
     </th:block>
-    <a href="/">Try some different choices</a>
+    <a href="/">Go Back</a>
 </footer>
 </body>
 </html>
