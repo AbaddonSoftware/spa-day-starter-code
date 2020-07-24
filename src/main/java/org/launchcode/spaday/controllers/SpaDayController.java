@@ -72,7 +72,12 @@ public class SpaDayController {
     @GetMapping(value="")
     @ResponseBody
     public String customerForm () {
-        String html = "<form method = 'post' action='/menu'>" +
+        String html = "<html>" +
+                "<head>" +
+                "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">" +
+                "</head>" +
+                "<body>" +
+                "<form method = 'post' action='/menu'>" +
                 "Name: <br>" +
                 "<input type = 'text' name = 'name'>" +
                 "<br>Skin type: <br>" +
@@ -89,7 +94,9 @@ public class SpaDayController {
                 "<option value = 'manipedi'>ManiPedi</option>" +
                 "</select><br>" +
                 "<input type = 'submit' value = 'Submit'>" +
-                "</form>";
+                "</form>" +
+                "</body>" +
+                "</html>";
         return html;
     }
 
