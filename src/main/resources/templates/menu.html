@@ -22,7 +22,7 @@
             <li th:text="${facialType}"></li>
         </ul>
     <h1 th:text="${manipedi.equals('manicure')} ? 'Manicure' : (${manipedi.equals('pedicure')} ? 'Pedicure' : 'ManiPedi') "></h1>
-    <p th:replace="${manipedi.equals('manicure')} ? ~{fragments :: manicureDescription} : ~{fragments :: pedicureDescription}"></p>
+<!--    <p th:replace="${manipedi.equals('manicure')} ? ~{fragments :: manicureDescription} : ~{fragments :: pedicureDescription}"></p>-->
     <th:block th:switch="${manipedi}">
         <th:block th:case="'manicure'">
             <p th:replace="fragments :: manicureDescription"></p>
