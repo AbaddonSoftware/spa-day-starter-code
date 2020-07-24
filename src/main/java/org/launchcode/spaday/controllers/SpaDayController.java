@@ -22,7 +22,7 @@ public class SpaDayController {
         return facialOptions;
     }
 
-    public boolean checkSkinType(String skinType, String facialType) {   // This function is not needed or used but is here for posterity currently
+    private boolean checkSkinType(String skinType, String facialType) {   // This function is not needed or used but is here for posterity currently
         return facialOptions.get(skinType).contains(facialType);
     }
 //        switch (skinType) {
@@ -72,7 +72,7 @@ public class SpaDayController {
     @GetMapping(value="")
     @ResponseBody
     public String customerForm () {
-        String html = "<form method = 'post'>" +
+        String html = "<form method = 'post' action='/menu'>" +
                 "Name: <br>" +
                 "<input type = 'text' name = 'name'>" +
                 "<br>Skin type: <br>" +
@@ -86,15 +86,16 @@ public class SpaDayController {
                 "<select name = 'manipedi'>" +
                 "<option value = 'manicure'>Manicure</option>" +
                 "<option value = 'pedicure'>Pedicure</option>" +
-//                "<option value = 'both'>Both/ManiPedi</option>" +
+                "<option value = 'manipedi'>ManiPedi</option>" +
                 "</select><br>" +
                 "<input type = 'submit' value = 'Submit'>" +
                 "</form>";
         return html;
     }
 
-    @PostMapping()
+    @PostMapping("menu")
     public String spaMenu(@RequestParam String name, @RequestParam String skintype, @RequestParam String manipedi, Model model) {
+        List<String> polishColors = Arrays.asList("Red", "Purple", "DarkGreen", "Pink", "Blue", "Turquoise");
 
 //        List<String> facials = Arrays.asList("Microdermabrasion", "Hydrofacial", "Rejuvenating", "Enzyme Peel");
 //        List<String> appropriateFacials = new ArrayList<String>();
@@ -106,6 +107,7 @@ public class SpaDayController {
         model.addAttribute("name", name);
         model.addAttribute("skintype", skintype);
         model.addAttribute("manipedi", manipedi);
+        model.addAttribute("polishes", polishColors);
         model.addAttribute("appropriateFacials", facialOptions.get(skintype));
         return "menu";
     }
