@@ -4,6 +4,19 @@ body {
     height: 100%;
 }
 
+input {
+    display:block;
+}
+
+select {
+    display:block;
+}
+
+fieldset {
+  border: none;
+}
+
+
 div {
     margin: auto;
     width: 95%;
@@ -11,25 +24,37 @@ div {
     padding: 10px;
     text-align: center;
     background-color: white;
+}
+
+#clientProfile {
     border:5px solid pink;
 }
 
 li {
     margin: auto;
-    width: 100px;
+    width: 10%;
 }
 
 h1 {
-    margin: auto;
-        width: 50%;
-        padding: 10px;
-        text-align: center;
-        background-color: white;
+     margin: auto;
+     width: 50%;
+     padding: 10px;
+     text-align: center;
+     background-color: white;
 }
 
 table {
-    margin: auto;
-            width: 50%;
-            padding: 10px;
-            text-align: center;
+      margin: auto;
+      width: 50%;
+      padding: 10px;
+      text-align: center;
+}
+
+footer {
+       width: 100%;
+       text-align: center;
+}
+
+footer h3 {
+        text-decoration: underline;
 }

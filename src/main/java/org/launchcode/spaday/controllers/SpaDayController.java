@@ -70,34 +70,33 @@ public class SpaDayController {
 //    }
 
     @GetMapping(value="")
-    @ResponseBody
     public String customerForm () {
-        String html = "<html>" +
-                "<head>" +
-                "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">" +
-                "</head>" +
-                "<body>" +
-                "<form method = 'post' action='/menu'>" +
-                "Name: <br>" +
-                "<input type = 'text' name = 'name'>" +
-                "<br>Skin type: <br>" +
-                "<select name = 'skintype'>" +
-                "<option value = 'oily'>Oily</option>" +
-                "<option value = 'combination'>Combination</option>" +
-                "<option value = 'normal'>Normal</option>" +
-                "<option value = 'dry'>Dry</option>" +
-                "</select><br>" +
-                "Manicure and/or Pedicure? <br>" +
-                "<select name = 'manipedi'>" +
-                "<option value = 'manicure'>Manicure</option>" +
-                "<option value = 'pedicure'>Pedicure</option>" +
-                "<option value = 'manipedi'>ManiPedi</option>" +
-                "</select><br>" +
-                "<input type = 'submit' value = 'Submit'>" +
-                "</form>" +
-                "</body>" +
-                "</html>";
-        return html;
+//        String html = "<html>" +
+//                "<head>" +
+//                "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">" +
+//                "</head>" +
+//                "<body>" +
+//                "<form method = 'post' action='/menu'>" +
+//                "Name: <br>" +
+//                "<input type = 'text' name = 'name'>" +
+//                "<br>Skin type: <br>" +
+//                "<select name = 'skintype'>" +
+//                "<option value = 'oily'>Oily</option>" +
+//                "<option value = 'combination'>Combination</option>" +
+//                "<option value = 'normal'>Normal</option>" +
+//                "<option value = 'dry'>Dry</option>" +
+//                "</select><br>" +
+//                "Manicure and/or Pedicure? <br>" +
+//                "<select name = 'manipedi'>" +
+//                "<option value = 'manicure'>Manicure</option>" +
+//                "<option value = 'pedicure'>Pedicure</option>" +
+//                "<option value = 'manipedi'>ManiPedi</option>" +
+//                "</select><br>" +
+//                "<input type = 'submit' value = 'Submit'>" +
+//                "</form>" +
+//                "</body>" +
+//                "</html>";
+        return "index";
     }
 
     @PostMapping("menu")

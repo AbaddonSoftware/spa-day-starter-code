@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <title>Spa Menu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0" />
     <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap" rel="stylesheet" />
 </head>
 <body>
 <div id = "clientProfile">
@@ -40,7 +40,7 @@
 <footer>
     <h3>Nail Colors</h3>
     <th:block th:each="polish : ${polishes}">
-        <div th:style="|background-color:${polish.toLowerCase()}; width:auto; display: inline; height:10%; margin: 2px; border:none;|" th:text="${polish}"></div>
+        <div th:style="|background-color:${polish.toLowerCase()}; width:10%; display: inline; height:10%; margin: 2px; border:none;|" th:text="${polish}"></div>
     </th:block>
     <a href="/">Go Back</a>
 </footer>
