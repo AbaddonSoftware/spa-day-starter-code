@@ -55,6 +55,15 @@ footer {
        text-align: center;
 }
 
-footer h3 {
-        text-decoration: underline;
+#special {
+    width:10%;
+    display:inline;
+    height:10%;
+    margin: 2px;
+    border:none;
+}
+
+footer a {
+       display: block;
+       float: bottom;
 }

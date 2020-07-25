@@ -24,13 +24,13 @@
     <h1 th:text="${manipedi.equals('manicure')} ? 'Manicure' : (${manipedi.equals('pedicure')} ? 'Pedicure' : 'ManiPedi') "></h1>
 <!--    <p th:replace="${manipedi.equals('manicure')} ? ~{fragments :: manicureDescription} : ~{fragments :: pedicureDescription}"></p>-->
     <th:block th:switch="${manipedi}">
-        <th:block th:case="'manicure'">
+        <th:block th:case="manicure">
             <p th:replace="fragments :: manicureDescription"></p>
         </th:block>
-        <th:block th:case="'pedicure'">
+        <th:block th:case="pedicure">
             <p th:replace="fragments :: pedicureDescription"></p>
         </th:block>
-        <th:block th:case="'manipedi'">
+        <th:block th:case="manipedi">
             <p th:replace="fragments :: manicureDescription"></p>
             <p th:replace="fragments :: pedicureDescription"></p>
         </th:block>
@@ -39,9 +39,11 @@
 </div>
 <footer>
     <h3>Nail Colors</h3>
-    <th:block th:each="polish : ${polishes}">
-        <div th:style="|background-color:${polish.toLowerCase()}; width:10%; display: inline; height:10%; margin: 2px; border:none;|" th:text="${polish}"></div>
-    </th:block>
+    <div>
+        <th:block th:each="polish : ${polishes}">
+            <div id="special" th:styleappend="|background-color:${polish.toLowerCase()};|" th:text="${polish}"></div>
+        </th:block>
+    </div>
     <a href="/">Go Back</a>
 </footer>
 </body>
