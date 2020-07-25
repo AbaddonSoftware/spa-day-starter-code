@@ -9,7 +9,7 @@ import java.util.*;
 
 @Controller
 public class SpaDayController {
-    private static final List<String> polishColors = Arrays.asList("Red", "Purple", "DarkGreen", "Pink", "Blue", "Turquoise");
+    private static final List<String> polishColors = Arrays.asList("Red", "Purple", "Pink", "Blue", "Turquoise");
     private static final Map<String, List<String>> facialOptions = createMap();
 
     private static Map<String, List<String>> createMap() {

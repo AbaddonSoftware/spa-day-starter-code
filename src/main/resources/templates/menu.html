@@ -40,8 +40,8 @@
 <footer>
     <h3>Nail Colors</h3>
     <div>
-        <th:block th:each="polish : ${polishes}">
-            <div id="special" th:styleappend="|background-color:${polish.toLowerCase()};|" th:text="${polish}"></div>
+        <th:block th:each="polishColor : ${polishes}">
+            <div id="special" th:styleappend="|background-color:${polishColor.toLowerCase()};|" th:text="${polishColor}"></div>
         </th:block>
     </div>
     <a href="/">Go Back</a>
