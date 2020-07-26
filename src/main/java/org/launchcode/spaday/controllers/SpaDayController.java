@@ -25,7 +25,7 @@ public class SpaDayController {
         return facialOptions.get(skinType).contains(facialType);
     }
 
-    @GetMapping(value="")
+    @GetMapping
     public String customerForm () {
         return "index";
     }

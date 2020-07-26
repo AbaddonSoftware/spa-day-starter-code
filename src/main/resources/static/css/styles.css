@@ -1,69 +1,67 @@
 body {
-    font-family: 'Alegreya', serif;
-    background-color: white;
-    height: 100%;
+  font-family: "Alegreya", serif;
+  background-color: white;
+  height: 100%;
 }
 
 input {
-    display:block;
+  display: block;
 }
 
 select {
-    display:block;
+  display: block;
 }
 
 fieldset {
   border: none;
 }
 
-
 div {
-    margin: auto;
-    width: 95%;
-    height: 95%;
-    padding: 10px;
-    text-align: center;
-    background-color: white;
+  margin: auto;
+  width: 95%;
+  height: 95%;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
 }
 
 #clientProfile {
-    border:5px solid pink;
+  border: 5px solid pink;
 }
 
 li {
-    margin: auto;
-    width: 10%;
+  margin: auto;
+  width: 10%;
 }
 
 h1 {
-     margin: auto;
-     width: 50%;
-     padding: 10px;
-     text-align: center;
-     background-color: white;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
 }
 
 table {
-      margin: auto;
-      width: 50%;
-      padding: 10px;
-      text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
 }
 
 footer {
-       width: 100%;
-       text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 #special {
-    width:10%;
-    display:inline;
-    height:10%;
-    margin: 2px;
-    border:none;
+  display: inline;
+  font-size: 80%;
+  margin: 2px;
+  border: none;
 }
 
 footer a {
-       display: block;
-       float: bottom;
+  display: block;
+  float: bottom;
 }
