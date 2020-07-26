@@ -24,10 +24,10 @@ public class SpaDayController {
     private boolean checkSkinType(String skinType, String facialType) {   // This function is not needed or used but is here for posterity currently
         return facialOptions.get(skinType).contains(facialType);
     }
-
-    @GetMapping(value="")
+    
+    @GetMapping
     public String customerForm () {
-        return "index";
+        return "spa-day";
     }
 
     @PostMapping("menu")
