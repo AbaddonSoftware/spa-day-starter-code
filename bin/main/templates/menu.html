@@ -21,10 +21,8 @@
     <div id="clientProfile">
       <h1>My Super Fancy Spa</h1>
       <h2>My profile</h2>
-      <!-- <p th:text="${name.matches('[//s]*')} ? 'Anonymous' : ${name}"></p> -->
-      <p th:text="${username}"></p>
-      <p th:text="${skintype}"></p>
-      <p th:text="${manipedi}"></p>
+      <p th:text="${client.skinType}"></p>
+      <p th:text="${client.nailService}"></p>
       <div id="servicesMenu">
         <h1>Menu of services</h1>
         <h3>Facial Treatments</h3>
@@ -32,13 +30,13 @@
           These facial treatments listed below are what our Estheticians
           recommend for your given skin type.
         </p>
-        <ul th:each="facialType : ${appropriateFacials}">
+        <ul th:each="facialType : ${client.appropriateFacials}">
           <li th:text="${facialType}"></li>
         </ul>
         <h1
-          th:text="${manipedi.equals('manicure')} ? 'Manicure' : (${manipedi.equals('pedicure')} ? 'Pedicure' : 'ManiPedi') "
+          th:text="${client.nailService.equals('manicure')} ? 'Manicure' : (${client.nailService.equals('pedicure')} ? 'Pedicure' : 'ManiPedi') "
         ></h1>
-        <th:block th:switch="${manipedi}">
+        <th:block th:switch="${client.nailService}">
           <th:block th:case="manicure">
             <p th:replace="fragments :: manicureDescription"></p>
           </th:block>
@@ -55,7 +53,7 @@
     <footer>
       <h3>Nail Colors</h3>
       <div>
-        <th:block th:each="polishColor : ${polishes}">
+        <th:block th:each="polishColor : ${client.polishColors}">
           <div
             id="special"
             th:styleappend="|background-color:${polishColor.toLowerCase()};|"
