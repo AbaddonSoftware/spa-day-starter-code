@@ -21,7 +21,8 @@
     <div id="clientProfile">
       <h1>My Super Fancy Spa</h1>
       <h2>My profile</h2>
-      <p th:text="${name.matches('[//s]*')} ? 'Anonymous' : ${name}"></p>
+      <!-- <p th:text="${name.matches('[//s]*')} ? 'Anonymous' : ${name}"></p> -->
+      <p th:text="${username}"></p>
       <p th:text="${skintype}"></p>
       <p th:text="${manipedi}"></p>
       <div id="servicesMenu">
