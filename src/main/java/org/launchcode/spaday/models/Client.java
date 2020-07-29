@@ -28,11 +28,11 @@ public class Client {
     }
     
     public void setAppropriateFacials(String skinType) {
+        facialOptions = createMap();
         appropriateFacials = facialOptions.get(skinType);
     }
 
     public List<String> getAppropriateFacials() {
-        facialOptions = createMap();
         return appropriateFacials;
     }
 
@@ -53,10 +53,5 @@ public class Client {
         return facialOptions;
     }
     
-    private boolean checkSkinType(String skinType, String facialType) {   // This function is not needed or used but is here for posterity currently
-        return facialOptions.get(skinType).contains(facialType);
-    }
-
-
     
 }

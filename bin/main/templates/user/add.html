@@ -2,21 +2,34 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>Add a user</title>
+    <meta
+    name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+  />
+  <link
+    href="../static/css/styles.css"
+    th:href="@{/css/styles.css}"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
     <fieldset>
-        <form method="post" action="/user">
+        <form method="post" action="/user/add">
             <label for "email">Email: </label>
             <input type="email" name="email" id="email" th:value="${email}" />
             <label for "username">Username: </label>
             <input type="text" name="userName" id="username" th:value="${username}" />
             <label for "password">Password: </label>
             <input type="password" name="password" id="password" />
-            <span th:text="${error} ? 'Passwords must match'"></span> 
+            <span id="error" th:text="${error} ? 'Passwords must match'"></span> 
             <label for "verify">Verify: </label>
             <input type="password" name="verify" id="verify" />
-            <span th:text="${error} ? 'Passwords must match'"></span> 
+            <span id="error" th:text="${error} ? 'Passwords must match'"></span> 
             <input type="submit" value="Submit" />
         </form>
     </fieldset>

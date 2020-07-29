@@ -2,7 +2,20 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>UserPage</title>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      href="../static/css/styles.css"
+      th:href="@{/css/styles.css}"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Welcome <th:block th:text="${username}"></th:block></h1>

@@ -61,6 +61,11 @@ footer {
   border: none;
 }
 
+#error {
+  display: block;
+  color: red;
+}
+
 footer a {
   display: block;
   float: bottom;

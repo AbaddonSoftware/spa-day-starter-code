@@ -12,17 +12,17 @@ public class UserController {
 
     @GetMapping("add")
     public String displayAddUserForm() {
-        return "/user/add";
+        return "user/add";
     }
 
-    @PostMapping
+    @PostMapping("add")
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
         model.addAttribute("username", user.getUserName());
         if(user.getPassword().equals(verify)) {
-            return "/user/index";
+            return "user/index";
         }
         model.addAttribute("email", user.getEmail());
         model.addAttribute("error", "Passwords do not match");
-        return "/user/add";
+        return "user/add";
     }
 }
