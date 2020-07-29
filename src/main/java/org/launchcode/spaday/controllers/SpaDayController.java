@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 
+
+
 @Controller
 public class SpaDayController {
     private static final List<String> polishColors = Arrays.asList("Red", "Purple", "Pink", "Blue", "Turquoise");
@@ -20,7 +22,7 @@ public class SpaDayController {
         facialOptions.put("dry", Arrays.asList("Hydrofacial", "Rejuvenating"));
         return facialOptions;
     }
-
+    
     private boolean checkSkinType(String skinType, String facialType) {   // This function is not needed or used but is here for posterity currently
         return facialOptions.get(skinType).contains(facialType);
     }
