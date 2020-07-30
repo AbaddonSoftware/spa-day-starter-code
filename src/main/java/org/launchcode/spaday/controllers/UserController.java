@@ -20,6 +20,7 @@ public class UserController {
     @PostMapping("add")
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
         model.addAttribute("userName", user.getUserName());
+        if(UserData.getAll().size() > 6) { UserData.clear(); }
         UserData.add(user);
         if(user.getPassword().equals(verify)) {
             model.addAttribute("users", UserData.getAll());

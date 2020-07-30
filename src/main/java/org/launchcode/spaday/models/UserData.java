@@ -21,4 +21,8 @@ public class UserData {
         return users.get(id);
     }
 
+    public static void clear() {
+        users.clear();
+    }
+
 }
