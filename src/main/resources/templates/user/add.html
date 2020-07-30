@@ -3,23 +3,11 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Add a user</title>
-    <meta
-    name="viewport"
-    content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
-  />
-  <link
-    href="../static/css/styles.css"
-    th:href="@{/css/styles.css}"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap"
-    rel="stylesheet"
-  />
+    <th:block th:replace="fragments :: headInclude"></th:block>
 </head>
 <body>
     <fieldset>
-        <form method="post" action="./user/add">
+        <form method="post" th:action="@{../user/add}">
             <label for "email">Email: </label>
             <input type="email" name="email" id="email" th:value="${email}" />
             <label for "username">Username: </label>

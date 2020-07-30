@@ -3,19 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Spa Menu</title>
-    <meta
-      name="viewport"
-      content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
-    />
-    <link
-      href="../static/css/styles.css"
-      th:href="@{/css/styles.css}"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap"
-      rel="stylesheet"
-    />
+    <th:block th:replace="fragments :: headInclude"></th:block>
   </head>
   <body>
     <div id="clientProfile">
@@ -61,7 +49,7 @@
           ></div>
         </th:block>
       </div>
-      <a href="./">Go Back</a>
+      <a th:href="@{./}">Go Back</a>
     </footer>
   </body>
 </html>

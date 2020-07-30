@@ -2,11 +2,11 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
   <head>
     <meta charset="UTF-8" />
-    <title>UserPage</title>
+    <title>Title</title>
     <th:block th:replace="fragments :: headInclude"></th:block>
   </head>
   <body>
-    <h1>Welcome <th:block th:text="${username}"></th:block></h1>
-    <a th:href="@{/}">Create a profile</a>
+    <p th:text="${user.userName}"></p>
+    <p th:text="${user.email}"></p>
   </body>
 </html>

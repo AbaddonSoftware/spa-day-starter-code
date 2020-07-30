@@ -3,22 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <title>UserPage</title>
-    <meta
-      name="viewport"
-      content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
-    />
-    <link
-      href="../static/css/styles.css"
-      th:href="@{/css/styles.css}"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap"
-      rel="stylesheet"
-    />
+    <th:block th:replace="fragments :: headInclude"></th:block>
   </head>
   <body>
-    <h1>Welcome <th:block th:text="${username}"></th:block></h1>
-    <a th:href="@{/}">Create a profile</a>
+    <h1>Welcome <th:block th:text="${userName}"></th:block></h1>
+    <a th:href="@{/user/add}">Create another user?</a>
+    <a th:href="@{/}">Create a profile?</a>
+    <ul th:each="user : ${users}">
+      <a th:href="@{'../user/detail?userID=' + ${user.ID}}"
+        ><li th:text="${user.userName}"></li
+      ></a>
+    </ul>
   </body>
 </html>
