@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-    <th:block th:replace="fragments :: headInclude"></th:block>
-  </head>
+  <th:block th:replace="fragments :: headInclude"></th:block>
   <body>
-    <p th:text="${user.userName}"></p>
+    <p th:text="${user.name}"></p>
     <p th:text="${user.email}"></p>
   </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-  <head>
-    <meta charset="UTF-8" />
-    <th:block th:fragment="headInclude">
+  <th:block th:fragment="headInclude">
+    <head>
+      <meta charset="UTF-8" />
       <meta
         name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
@@ -16,9 +16,14 @@
         href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap"
         rel="stylesheet"
       />
-    </th:block>
-    <title>Fragments</title>
-  </head>
+      <script
+        th:with="host=${#request.getServerName()},port=${@environment.getProperty('spring.devtools.livereload.port')}"
+        th:src="@{js/livereload.js(host=${host},port=${port == null}? 35729 : ${port},v=3.3.1)}"
+        th:if="${@environment.getProperty('foobar.devtools.livereload.include-js')}"
+      ></script>
+      <title th:text="${title} ? ${title} : 'Spa-Day'"></title>
+    </head>
+  </th:block>
   <body>
     <p th:fragment="manicureDescription">
       Our manicure is a great way to spend 30 minutes of your day! We use shea

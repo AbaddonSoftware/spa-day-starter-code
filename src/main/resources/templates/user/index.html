@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-  <head>
-    <meta charset="UTF-8" />
-    <title>UserPage</title>
-    <th:block th:replace="fragments :: headInclude"></th:block>
-  </head>
+  <th:block th:replace="fragments :: headInclude"></th:block>
   <body>
-    <h1>Welcome <th:block th:text="${userName}"></th:block></h1>
+    <h1>Welcome <th:block th:text="${name}"></th:block></h1>
     <a th:href="@{/user/add}">Create another user?</a>
     <a th:href="@{/}">Create a profile?</a>
     <ul th:each="user : ${users}">
       <a th:href="@{'../user/detail?userID=' + ${user.ID}}"
-        ><li th:text="${user.userName}"></li
+        ><li th:text="${user.name}"></li
       ></a>
     </ul>
   </body>
