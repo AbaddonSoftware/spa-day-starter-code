@@ -1,8 +1,10 @@
-package org.launchcode.spaday.models;
+package org.launchcode.spaday.data;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import org.launchcode.spaday.models.User;
 
 public class UserData {
     
