@@ -2,8 +2,8 @@ package org.launchcode.spaday.controllers;
 
 import javax.validation.Valid;
 
-import org.launchcode.spaday.data.UserData;
 import org.launchcode.spaday.models.User;
+import org.launchcode.spaday.models.UserData;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
@@ -28,9 +28,7 @@ public class UserController {
         UserData.add(user);
         model.addAttribute("users", UserData.getAll());
         return "user/index";
-
-        
-        
+   
     }
 
     @GetMapping("detail")
